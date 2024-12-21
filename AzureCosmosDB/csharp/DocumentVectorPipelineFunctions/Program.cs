@@ -18,7 +18,7 @@ const string AzureOpenAIModelDeploymentConfigName = "AzureOpenAIModelDeployment"
 
 var managedIdentityClientId = Environment.GetEnvironmentVariable("AzureManagedIdentityClientId");
 var local = Convert.ToBoolean(Environment.GetEnvironmentVariable("RunningLocally"));
-
+//
 TokenCredential credential = local
     ? new DefaultAzureCredential()
     : new ManagedIdentityCredential(clientId: managedIdentityClientId);
